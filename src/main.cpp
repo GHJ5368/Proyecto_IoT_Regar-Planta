@@ -89,7 +89,7 @@ void loop () {
   //
   // Every 1 second, do a measurement using the sensor and print the distance in centimeters.
   int valor = analogRead(A0);
-  int humedad = map(valor, 1023, 300, 0, 100);
+  int humedad = map(valor, 1023, 0, 0, 100);
 
   display.clearDisplay();
   display.setCursor(0,0);
