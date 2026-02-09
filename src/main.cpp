@@ -15,7 +15,7 @@ Adafruit_SSD1306 display(SCREEN_WIDTH,SCREEN_HEIGHT,&Wire);
 
 // Inicializar la comunicacion serie
 #include <SoftwareSerial.h>
-SoftwareSerial miSerial(1, 3);// Pines RX1=1, TX1=3
+SoftwareSerial miSerial(14, 12);// Pines RX=D5 (14), TX=D6 (12)
 
 
 void setup () {
@@ -45,7 +45,7 @@ void loop () {
   display.print("% de humedad");
   display.display();
   
-  miSerial.print(humedad);
+  miSerial.println(humedad);
 
 
 }
